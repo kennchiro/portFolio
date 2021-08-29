@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       designSize: Size(360, 690),
       builder: () => MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'PortFolio Maharo',
         theme: ThemeData(
             primarySwatch: Colors.blue,
             textTheme: TextTheme(button: TextStyle(fontSize: 45.w))),
