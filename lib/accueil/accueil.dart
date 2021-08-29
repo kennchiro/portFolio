@@ -84,7 +84,7 @@ class Accueil extends StatelessWidget {
           ),
           SizedBox(width: 10),
           MenuUrl(
-            title: "Contacte",
+            title: "Contact",
             imagePath: 'images/contact.png',
 
           ),
