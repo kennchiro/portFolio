@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:testweb/accueil/accueil.dart';
-import 'package:testweb/drawer/my_drawer.dart';
 import 'package:testweb/widgets/BottomNavBar.dart';
 import 'package:testweb/widgets/my_appBar.dart';
 
@@ -14,7 +14,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar(),
-      drawer: MyDrawer(),
       body: Accueil(),
       bottomNavigationBar: BottomNavBar(),
     );

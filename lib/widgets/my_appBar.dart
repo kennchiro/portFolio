@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pro_drawer/pro_drawer.dart';
 import 'package:spring/spring.dart';
 
 class MyAppBar extends StatelessWidget with PreferredSizeWidget{
@@ -8,6 +9,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget{
   @override
   Widget build(BuildContext context) {
     return AppBar(
+     leading: IconButton(onPressed: ()=> ProDrawer.of(context).toggle(), icon: Icon(Icons.reorder)),
         iconTheme: IconThemeData(color: Colors.white60),
         backgroundColor: Colors.black,
         elevation: 0,

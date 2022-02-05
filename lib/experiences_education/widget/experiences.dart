@@ -32,27 +32,27 @@ class Experience extends StatelessWidget {
               entreprise: 'DRCF-HM',
               ville: 'Fianarantsoa - Anjoma ',
               contextJob:
-                  " « Conception et réalisation d’une application de Gestion du courrier » : en JAVA et Code Igniter. ",
+                  " « Conception et réalisation d'une application de Gestion du courrier » : en JAVA et Code Igniter. ",
             ),
              SizedBox(
                 height: 20,
              ),
             ExperienceItem(
-              dateExp: 'Novembre 2019 – Février. 2020',
+              dateExp: 'Novembre 2019 - Février. 2020',
               entreprise: 'Agence RedSakay',
               ville: 'Antananarivo - Antanimena ',
               contextJob:
-                  " « Conception et réalisation d’une application mobile de Gestion de tache personnelle » et « une application mobile pour l’industrie salto au sein de l’agence RedSakay » : en Flutter-Dart-Firebase.",
+                  " « Conception et réalisation d'une application mobile de Gestion de tache personnelle » et « une application mobile pour l'industrie salto au sein de l'agence RedSakay » : en Flutter-Dart-Firebase.",
             ),
              SizedBox(
               height: 20,
             ),
             ExperienceItem(
-              dateExp: 'Mai 2021 – Juillet. 2021',
+              dateExp: 'Mai 2021 - Juillet. 2021',
               entreprise: 'Société KAIROS',
               ville: 'Fianarantsoa',
               contextJob:
-                  " « Conception et réalisation d’une application web/mobile de vente en ligne » en Flutter-Dart-Firebase.",
+                  " « Conception et réalisation d'une application web/mobile de vente en ligne » en Flutter-Dart-Firebase.",
             ),
              SizedBox(
               height: 20,

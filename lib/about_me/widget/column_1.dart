@@ -42,7 +42,7 @@ class Column1 extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          "Je suis un étudiant de l’Ecole de Management et d’Innovation Technologique (EMIT) au sein de l’Université de Fianarantsoa (UF). Dans le parcours de  Modélisation et Ingénieurie Informatique (M2I). Mon objectif est d’enrichir mon expérience sur le développement d’application web et mobile",
+                          "Ingénieur en Informatique passionné de nouvelles technologies, je me suis spécialisé en développement natif avec Flutter ou Kotlin. Mon objectif est d’enrichir mon expérience sur le développement d’application mobile et web",
                           style: TextStyle(
                             color: Colors.white60,
                             fontWeight: FontWeight.normal,

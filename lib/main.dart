@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:testweb/home_page/home_page.dart';
+import 'package:testweb/landing_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             primarySwatch: Colors.blue,
             textTheme: TextTheme(button: TextStyle(fontSize: 45.w))),
-        home: MyHomePage(),
+        home: LandingScreenDrawer(),
       ),
     );
   }

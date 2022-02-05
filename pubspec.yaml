@@ -33,6 +33,9 @@ dependencies:
   flutter_animation_progress_bar:
   spring:
   flutter_screenutil:  
+  getwidget: ^2.0.4
+  animated_text_kit: ^4.2.1
+  pro_drawer: ^0.0.3
     
 
 dev_dependencies:

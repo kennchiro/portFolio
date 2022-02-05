@@ -1,32 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MenuUrl extends StatelessWidget {
   final String title;
-  final String imagePath;
+  final IconData icon;
 
   MenuUrl({
     Key? key,
     required this.title,
-    required this.imagePath,
+    required this.icon,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      Row(children: [
-        Image(
-          image: AssetImage(this.imagePath),
+    return TextButton.icon(
+
+      onPressed: () {},
+      icon: Icon(icon, size: 22, color: Colors.white70,),
+      label: Text(
+        this.title,
+        style: TextStyle(
+          color: Colors.white70,
+          fontSize: 22,
         ),
-        SizedBox(width: 5.w),
-        Text(
-          this.title,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 12.w,
-          ),
-        ),
-      ]),
-    ]);
+      ),
+    );
   }
 }
