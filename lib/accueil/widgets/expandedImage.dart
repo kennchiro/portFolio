@@ -23,7 +23,7 @@ class _ExpandedImageProfileState extends State<ExpandedImageProfile>
               "Bienvenue tout le monde",
               style: TextStyle(
                 color: Colors.white54,
-                fontSize: 8.w,
+                fontSize: 18.h,
               ),
             ),
             decoration: BoxDecoration(
@@ -35,6 +35,12 @@ class _ExpandedImageProfileState extends State<ExpandedImageProfile>
             ),
           );
         });
+  }
+
+  @override
+  void dispose() {
+    _resizableController!.dispose();
+    super.dispose();
   }
 
   @override

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pro_drawer/pro_drawer.dart';
+import 'package:testweb/Contact/contactPage.dart';
+import 'package:testweb/Project/project_page.dart';
 import 'package:testweb/about_me/about_page.dart';
 import 'package:testweb/experiences_education/experience_education_page.dart';
-import 'package:testweb/home_page/home_page.dart';
+import 'package:testweb/home/home_page.dart';
 import 'package:testweb/skills/skill_page.dart';
 
 class DrawerMenus {
@@ -12,7 +14,7 @@ class DrawerMenus {
     about,
     competence,
     experience,
-    projet,
+    project,
     contact,
   ];
 
@@ -48,12 +50,12 @@ class DrawerMenus {
     screen: ExperienceEducationPage(),
   );
 
-    static final projet = DrawerMenu(
+    static final project = DrawerMenu(
     icon: Image(
       image: AssetImage('images/work.png'),
     ),
     title: "Projets",
-    screen: null,
+    screen: ProjectPage(),
   );
 
  static final contact = DrawerMenu(
@@ -61,7 +63,7 @@ class DrawerMenus {
       image:  AssetImage('images/contact.png'),
     ),
     title: "Contact",
-    screen: null,
+    screen: ContactPage(),
   );
  
 }

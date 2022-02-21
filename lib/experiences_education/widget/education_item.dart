@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:spring/spring.dart';
 
@@ -36,7 +37,7 @@ class EducationItem extends StatelessWidget {
                     color: Colors.white, size: 28),
               ),
             ),
-            SizedBox(width: 30),
+            SizedBox(width: 30.h),
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
@@ -47,7 +48,7 @@ class EducationItem extends StatelessWidget {
                       this.dateEduc,
                       style: TextStyle(
                         color: Colors.grey.shade700,
-                        fontSize: 15,
+                        fontSize: 12.h,
                       ),
                     ),
                     Text(
@@ -55,7 +56,7 @@ class EducationItem extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.black87,
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 13.h,
                       ),
                     ),
                     Text(
@@ -63,7 +64,7 @@ class EducationItem extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.black87,
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 15.h,
                       ),
                     ),
                   ],

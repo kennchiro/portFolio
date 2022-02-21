@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spring/spring.dart';
 
 class ExperienceItem extends StatelessWidget {
@@ -6,6 +7,8 @@ class ExperienceItem extends StatelessWidget {
   final String entreprise;
   final String ville;
   final String contextJob;
+  //
+  final Widget listWidgetOutil;
 
   const ExperienceItem({
     Key? key,
@@ -13,13 +16,14 @@ class ExperienceItem extends StatelessWidget {
     required this.entreprise,
     required this.ville,
     required this.contextJob,
+    required this.listWidgetOutil,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Spring.slide(
       slideType: SlideType.slide_in_bottom,
-      delay: const Duration(milliseconds : 20),
+      delay: const Duration(milliseconds: 20),
       child: Container(
         child: Row(
           children: [
@@ -47,7 +51,7 @@ class ExperienceItem extends StatelessWidget {
                       this.dateExp,
                       style: TextStyle(
                         color: Colors.grey.shade700,
-                        fontSize: 15,
+                        fontSize: 12.h,
                       ),
                     ),
                     Text(
@@ -55,7 +59,7 @@ class ExperienceItem extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.black87,
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 15.h,
                       ),
                     ),
                     Text(
@@ -63,14 +67,17 @@ class ExperienceItem extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.black87,
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 15.h,
                       ),
                     ),
                     SizedBox(height: 5),
                     Text(
                       "Job d'été : " + this.contextJob,
-                      style: TextStyle(color: Colors.black54, fontSize: 18),
+                      style: TextStyle(color: Colors.black87, fontSize: 12.h),
                     ),
+                    Container(
+                      child: listWidgetOutil,
+                      ),
                   ],
                 ),
               ),

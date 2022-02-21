@@ -15,15 +15,23 @@ class Education extends StatelessWidget {
         child: Column(
           children: [
             Text(
-            "EDUCATIONS",
-            style: TextStyle(
-              color: Color(0xFFadad57).withOpacity(0.9),
-              fontWeight: FontWeight.bold,
-              fontSize: 25,
-            ),
+              "EDUCATIONS",
+              style: TextStyle(
+                color: Color(0xFFadad57).withOpacity(0.9),
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
               ),
+            ),
             SizedBox(
               height: 10,
+            ),
+            EducationItem(
+              dateEduc: 'Novembre 2021 - Mai 2022',
+              ecole: 'EMIT Andrainjato Fianarantsoa',
+              cycle: '2eme année de Master en informatique',
+            ),
+            SizedBox(
+              height: 35,
             ),
             EducationItem(
               dateEduc: 'Novembre 2020 - Mai 2021',
