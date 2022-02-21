@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProjectCard extends StatelessWidget {
-  
   final String? projectNum;
   final Function() showAlertPhoto;
   final Function() showAlertVideo;
@@ -41,18 +40,26 @@ class ProjectCard extends StatelessWidget {
                 children: [
                   TextButton.icon(
                     onPressed: showAlertPhoto,
-                    icon: Icon(Icons.photo_library, color:  Color(0xFFadad57).withOpacity(0.9),),
+                    icon: Icon(
+                      Icons.photo_library,
+                      color: Color(0xFFadad57).withOpacity(0.9),
+                      size: 15.sp,
+                    ),
                     label: Text(
                       'Photos',
-                      style: TextStyle(color: Colors.white70, fontSize: 15.h),
+                      style: TextStyle(color: Colors.white70, fontSize: 15.sp),
                     ),
                   ),
                   TextButton.icon(
                     onPressed: showAlertVideo,
-                    icon: Icon(Icons.video_collection, color:  Color(0xFFadad57).withOpacity(0.9),),
+                    icon: Icon(
+                      Icons.video_collection,
+                      color: Color(0xFFadad57).withOpacity(0.9),
+                      size: 15.sp,
+                    ),
                     label: Text(
                       'Video',
-                      style: TextStyle(color: Colors.white70, fontSize: 15.h),
+                      style: TextStyle(color: Colors.white70, fontSize: 15.sp),
                     ),
                   ),
                 ],

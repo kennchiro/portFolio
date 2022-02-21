@@ -1,9 +1,11 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:video_player/video_player.dart';
 
 class ControlsOverlay extends StatelessWidget {
-  const ControlsOverlay({Key? key, required this.controller})
-      : super(key: key);
+  const ControlsOverlay({Key? key, required this.controller}) : super(key: key);
 
   static const _exampleCaptionOffsets = [
     Duration(seconds: -10),
@@ -43,7 +45,7 @@ class ControlsOverlay extends StatelessWidget {
                   color: Colors.black26,
                   child: Center(
                     child: Icon(
-                      Icons.play_arrow,
+                      Icons.play_arrow_sharp,
                       color: Colors.white,
                       size: 100.0,
                       semanticLabel: 'Play',
@@ -60,7 +62,7 @@ class ControlsOverlay extends StatelessWidget {
 
         // caption offset
         Align(
-          alignment: Alignment.topLeft,
+          alignment: Alignment.bottomLeft,
           child: PopupMenuButton<Duration>(
             initialValue: controller.value.captionOffset,
             tooltip: 'Caption Offset',
@@ -84,14 +86,20 @@ class ControlsOverlay extends StatelessWidget {
                 vertical: 12,
                 horizontal: 16,
               ),
-              child: Text('${controller.value.captionOffset.inMilliseconds}ms'),
+              child: Text(
+                '${controller.value.captionOffset.inMilliseconds}ms',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15.sp),
+              ),
             ),
           ),
         ),
 
         //Playback Speed
         Align(
-          alignment: Alignment.topRight,
+          alignment: Alignment.bottomRight,
           child: PopupMenuButton<double>(
             initialValue: controller.value.playbackSpeed,
             tooltip: 'Playback speed',
@@ -115,7 +123,13 @@ class ControlsOverlay extends StatelessWidget {
                 vertical: 12,
                 horizontal: 16,
               ),
-              child: Text('${controller.value.playbackSpeed}x'),
+              child: Text(
+                '${controller.value.playbackSpeed}x',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15.sp),
+              ),
             ),
           ),
         ),

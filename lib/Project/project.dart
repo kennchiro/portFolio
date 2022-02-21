@@ -136,15 +136,29 @@ class _ProjectState extends State<Project> {
                 mainAxisSpacing: 20.h,
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
-                crossAxisCount: constraint.maxWidth > 920 ? 3 : 2,
+                crossAxisCount: 
+                constraint.maxWidth > 920 
+                ? 3 
+                : constraint.maxWidth >= 500 
+                   ? 2 
+                   : 1,
                 children: [
+                  //
                   ProjectCard(
                     images: 'images/kairosAdminRepresentation.png',
                     showAlertPhoto: () => showAlertPhotos('project1'),
                     projectNum: 'project1',
                     showAlertVideo: () => showAlertVideos('videos/kairosAdmin.mp4'),
                   ),
+                  //
                   ProjectCard(
+                    images: 'images/kairosAdminRepresentation.png',
+                    showAlertPhoto: () => showAlertPhotos('project2'),
+                    projectNum: 'project2',
+                    showAlertVideo: () => showAlertVideos('videos/kairosAdmin.mp4'),
+                  ),
+                  //
+                   ProjectCard(
                     images: 'images/kairosAdminRepresentation.png',
                     showAlertPhoto: () => showAlertPhotos('project2'),
                     projectNum: 'project2',
