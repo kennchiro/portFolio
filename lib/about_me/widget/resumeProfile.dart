@@ -1,19 +1,27 @@
+
 import 'package:flutter/material.dart';
-import 'package:spring/spring.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:spring/spring.dart';
 
-class ResumeProfile extends StatelessWidget {
-  final double heightC1;
-
-  const ResumeProfile({
+class ResumeProfile extends StatefulWidget {
+  ResumeProfile({
     required this.heightC1,
   });
+
+  final double heightC1;
+
+  @override
+  State<ResumeProfile> createState() => _ResumeProfileState();
+}
+
+class _ResumeProfileState extends State<ResumeProfile> {
+ 
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        height: heightC1,
+        height: widget.heightC1,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("images/profile-bg.jpg"),
@@ -56,7 +64,9 @@ class ResumeProfile extends StatelessWidget {
                 //
                 MaterialButton(
                   color: Colors.black45,
-                  onPressed: () {},
+                  onPressed: () async {
+                   
+                  },
                   child: Text(
                     "TELECHARGER CV",
                     style: TextStyle(color: Colors.white, fontSize: 15.sp),

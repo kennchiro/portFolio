@@ -37,6 +37,8 @@ dependencies:
   animated_text_kit: ^4.2.1
   pro_drawer: ^0.0.3
   video_player: ^2.2.18
+  dio: ^4.0.4
+  path_provider: ^2.0.9
 
     
 
@@ -62,8 +64,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/
-    - images/projet1/
     - videos/
+    - Cv/cv-maharo.pdf
 
 
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:testweb/Project/widget/genarateCaroussel.dart';
+import 'package:testweb/Project/widget/alertDialog.dart';
 import 'package:testweb/Project/widget/projectCard.dart';
 import 'package:testweb/Project/widget/videoPlayer.dart';
 
@@ -15,94 +15,28 @@ class _ProjectState extends State<Project> {
     super.initState();
   }
 
-  static List<String> project1 = [
-    'images/projet1/1.jpg',
-    'images/projet1/2.png',
-    'images/projet1/3.png',
-    'images/projet1/4.png',
-    'images/projet1/5.png',
-    'images/projet1/6.png',
-    'images/projet1/7.png',
-    'images/projet1/8.png',
-    'images/projet1/9.png',
-    'images/projet1/10.png',
-    'images/projet1/11.png',
-    'images/projet1/12.png',
+  // notre list de projet actuel
+  List<Map> mapProject = [
+    {
+      'project' : 'project1',
+      'image': 'images/kairosAdminRepresentation.png',
+      'video': 'videos/kairosAdmin.mp4',
+    },
+    {  
+      'project': 'project2',
+      'image': 'images/kairosClient.png',
+      'video': 'videos/kairosClient.mp4',
+    }
   ];
-
-  String projectVideo1 = 'videos/video1.mp4';
-
-  static List<String> project2 = [
-    'images/projet1/1.jpg',
-    'images/projet1/2.png',
-    'images/projet1/3.png',
-  ];
-
-  showAlertPhotos(String s) {
-    showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            elevation: 10,
-            alignment: Alignment.center,
-            title: Container(
-              color: Colors.black12,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  TextButton.icon(
-                    onPressed: null,
-                    icon: Icon(Icons.photo_library),
-                    label: Text(
-                      "Photos",
-                      style: TextStyle(fontSize: 15.h),
-                    ),
-                  ),
-                  IconButton(
-                      onPressed: () => Navigator.pop(context),
-                      icon: Icon(
-                        Icons.close,
-                        color: Colors.red,
-                      ))
-                ],
-              ),
-            ),
-            content: s == 'project1'
-                ? GenerateCarousel(listString: project1)
-                : GenerateCarousel(listString: project2),
-          );
-        });
-  }
 
   showAlertVideos(String s) {
     showDialog(
         context: context,
         builder: (context) {
-          return AlertDialog(
-              alignment: Alignment.center,
-              title: Container(
-                color: Colors.black12,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TextButton.icon(
-                      onPressed: null,
-                      icon: Icon(Icons.video_collection),
-                      label: Text(
-                        "Video",
-                        style: TextStyle(fontSize: 15.h),
-                      ),
-                    ),
-                    IconButton(
-                        onPressed: () => Navigator.pop(context),
-                        icon: Icon(
-                          Icons.close,
-                          color: Colors.red,
-                        ))
-                  ],
-                ),
-              ),
-              content: VideoPlayUI(videoPath: s));
+          return DialogType(
+              label: 'Demo',
+              iconType: Icons.video_camera_back,
+              contentWidget: VideoPlayUI(videoPath: s));
         });
   }
 
@@ -131,41 +65,28 @@ class _ProjectState extends State<Project> {
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 30.h),
-              child: GridView.count(
-                crossAxisSpacing: 20.h,
-                mainAxisSpacing: 20.h,
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                crossAxisCount: 
-                constraint.maxWidth > 920 
-                ? 3 
-                : constraint.maxWidth >= 500 
-                   ? 2 
-                   : 1,
-                children: [
-                  //
-                  ProjectCard(
-                    images: 'images/kairosAdminRepresentation.png',
-                    showAlertPhoto: () => showAlertPhotos('project1'),
-                    projectNum: 'project1',
-                    showAlertVideo: () => showAlertVideos('videos/kairosAdmin.mp4'),
+              child: GridView.builder(
+                  padding: const EdgeInsets.all(10),
+                  shrinkWrap: true,
+                  itemCount: mapProject.length,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: constraint.maxWidth > 920
+                        ? 3
+                        : constraint.maxWidth >= 500
+                            ? 2
+                            : 1,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 1,
                   ),
-                  //
-                  ProjectCard(
-                    images: 'images/kairosAdminRepresentation.png',
-                    showAlertPhoto: () => showAlertPhotos('project2'),
-                    projectNum: 'project2',
-                    showAlertVideo: () => showAlertVideos('videos/kairosAdmin.mp4'),
-                  ),
-                  //
-                   ProjectCard(
-                    images: 'images/kairosAdminRepresentation.png',
-                    showAlertPhoto: () => showAlertPhotos('project2'),
-                    projectNum: 'project2',
-                    showAlertVideo: () => showAlertVideos('videos/kairosAdmin.mp4'),
-                  ),
-                ],
-              ),
+                  itemBuilder: (_, index) {
+                    final select = mapProject[index];
+                    return ProjectCard(
+                      images: select['image'],
+                      projectNum: select['project'],
+                      showAlertVideo: () => showAlertVideos(select['video']),
+                    );
+                  }),
             ),
           ],
         ),
