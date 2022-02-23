@@ -1,3 +1,4 @@
+import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,7 +16,12 @@ class ResumeProfile extends StatefulWidget {
 }
 
 class _ResumeProfileState extends State<ResumeProfile> {
- 
+
+  downloadLocalFile(url) {
+    AnchorElement anchorElement = new AnchorElement(href: url);
+    anchorElement.download = 'cv-maharo.pdf';
+    anchorElement.click();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -64,9 +70,7 @@ class _ResumeProfileState extends State<ResumeProfile> {
                 //
                 MaterialButton(
                   color: Colors.black45,
-                  onPressed: () async {
-                   
-                  },
+                  onPressed: ()=> downloadLocalFile('Cv/cv-maharo.pdf'),
                   child: Text(
                     "TELECHARGER CV",
                     style: TextStyle(color: Colors.white, fontSize: 15.sp),
