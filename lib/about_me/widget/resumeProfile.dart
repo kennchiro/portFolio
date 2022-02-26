@@ -5,7 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spring/spring.dart';
 
 class ResumeProfile extends StatefulWidget {
-  ResumeProfile({
+  
+  const ResumeProfile({
     required this.heightC1,
   });
 
