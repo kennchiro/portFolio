@@ -24,17 +24,41 @@
 
   <title>Portfolio Maharo</title>
   <link rel="manifest" href="manifest.json">
+   
+  <!-- style for our loading gif -->
+  <style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex; /* Default Axis is X*/
+      justify-content: center; /* Main Axis */
+      align-items: center; /* Cross Axis */
+    }
+    .indicator{
+      width: 5vw;
+    }
+</style> 
+
 </head>
-<body>
+<body style="overflow: hidden">
+  
+  <!-- loading gif will use when user wait a loading screen   -->
+  <div id="loading_indicator" class="container">
+    <img class="indicator" src="icons/gif/bouncing_ball.gif" />
+  </div>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+   
+       
+       
   <script>
+    var loadingIndicator = document.getElementById("loading_indicator");  
     var serviceWorkerVersion = null;
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
-        return;
+        return document.body.append(loadingIndicator);
       }
       scriptLoaded = true;
       var scriptTag = document.createElement('script');
@@ -92,6 +116,9 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
+
+   
+
   </script>
 </body>
 </html>
