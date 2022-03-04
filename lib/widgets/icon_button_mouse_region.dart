@@ -7,10 +7,12 @@ class IconButtonMouseRegion extends StatefulWidget {
     Key? key,
     required this.initialColor,
     required this.socialIcon,
+    required this.size,
   }) : super(key: key);
 
   Color initialColor;
   IconData socialIcon;
+  double size;
 
   @override
   _IconButtonMouseRegionState createState() => _IconButtonMouseRegionState();
@@ -35,7 +37,7 @@ class _IconButtonMouseRegionState extends State<IconButtonMouseRegion> {
         icon: FaIcon(
           widget.socialIcon,
           color: widget.initialColor,
-          size: 30,
+          size: widget.size,
         ),
       ),
     );

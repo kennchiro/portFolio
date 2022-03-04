@@ -21,18 +21,22 @@ class _BottomNavBarState extends State<BottomNavBar> {
           IconButtonMouseRegion(
             socialIcon: FontAwesomeIcons.facebook, 
             initialColor: Colors.grey,
+            size: 30,
           ),
            IconButtonMouseRegion(
             socialIcon: FontAwesomeIcons.mailBulk,
             initialColor: Colors.grey,
+             size: 30,
           ),
            IconButtonMouseRegion(
             socialIcon: FontAwesomeIcons.skype, 
             initialColor: Colors.grey,
+             size: 30,
           ),
            IconButtonMouseRegion(
             socialIcon: FontAwesomeIcons.linkedin, 
             initialColor: Colors.grey,
+             size: 30,
           ),
         ],
       ),

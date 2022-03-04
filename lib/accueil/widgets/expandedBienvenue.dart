@@ -8,7 +8,6 @@ import 'col_title.url.dart';
 class ExpandedBienvenue extends StatelessWidget {
   const ExpandedBienvenue({Key? key}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraint) {
