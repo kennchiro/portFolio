@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:testweb/accueil/widgets/technoTile.dart';
 
 class Android extends StatelessWidget {
   const Android({Key? key}) : super(key: key);
@@ -9,66 +11,30 @@ class Android extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Icon(
-          Icons.android,
-          color: Colors.lime,
-          size: 100,
-        ),
-        Text(
-          'ANDROID',
-          style: TextStyle(
-            color: Colors.white70,
-            fontSize: 20,
+
+        SizedBox(
+          child: Column(
+            children: [
+              Icon(
+                Icons.android,
+                color: Color(0xFFadad57).withOpacity(0.9),
+                size: 70.sp,
+              ),
+              Text(
+                'ANDROID',
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontFamily: 'OpenSansCondensed',
+                  fontSize: 25.sp,
+                ),
+              ),
+            ],
           ),
         ),
-        Row(
-          children: [
-            Icon(
-              Icons.circle,
-              color: Colors.white70,
-              size: 15,
-            ),
-            SizedBox(
-              width: 15,
-            ),
-            Text(
-              'Flutter',
-              style: TextStyle(color: Colors.white70),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            Icon(
-              Icons.circle,
-              color: Colors.white70,
-              size: 15,
-            ),
-            SizedBox(
-              width: 15,
-            ),
-            Text(
-              'Kotlin',
-              style: TextStyle(color: Colors.white70),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            Icon(
-              Icons.circle,
-              color: Colors.white70,
-              size: 15,
-            ),
-            SizedBox(
-              width: 15,
-            ),
-            Text(
-              'Java',
-              style: TextStyle(color: Colors.white70),
-            ),
-          ],
-        ),
+        //
+        TechnoTile(techno: 'Flutter'),
+        TechnoTile(techno: 'Kotlin'),
+        TechnoTile(techno: 'Java'),
       ],
     );
   }

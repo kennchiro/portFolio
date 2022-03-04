@@ -17,7 +17,7 @@ class ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Spring.slide(
-     slideType: SlideType.slide_in_bottom,
+      slideType: SlideType.slide_in_bottom,
       child: Material(
         elevation: 5,
         child: Column(
@@ -45,7 +45,11 @@ class ProjectCard extends StatelessWidget {
                   ),
                   label: Text(
                     'Vidéo Démo ...',
-                    style: TextStyle(color: Colors.white70, fontSize: 25.sp),
+                    style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 25.sp,
+                      fontFamily: 'OpenSansCondensed',
+                    ),
                   ),
                 ),
               ),

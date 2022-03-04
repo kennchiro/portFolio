@@ -23,14 +23,15 @@ class _ExpandedImageProfileState extends State<ExpandedImageProfile>
               "Bienvenue tout le monde",
               style: TextStyle(
                 color: Colors.white54,
-                fontSize: 18.h,
+                fontSize: 18.sp,
+                fontFamily: 'OpenSansCondensed',
               ),
             ),
             decoration: BoxDecoration(
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.all(Radius.circular(12)),
               border: Border.all(
-                  color: Colors.white70,
+                  color:  Color(0xFFadad57).withOpacity(0.9),
                   width: _resizableController!.value * 3),
             ),
           );
@@ -76,11 +77,11 @@ class _ExpandedImageProfileState extends State<ExpandedImageProfile>
         child: Container(
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            color: Colors.black,
+            color:Colors.black,
             image: DecorationImage(
-              colorFilter: ColorFilter.srgbToLinearGamma(),
+              colorFilter: ColorFilter.linearToSrgbGamma(),
               image: AssetImage(
-                "images/profile-bg.jpg",
+                "images/profile1-bg.png",
               ),
               fit: BoxFit.cover,
             ),

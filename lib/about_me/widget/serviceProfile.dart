@@ -12,13 +12,14 @@ class ServiceProfile extends StatelessWidget {
     required this.heightC2,
   });
 
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: SingleChildScrollView(
         child: Container(
           height: this.heightC2,
-          color: Colors.white,
+          color: Color.fromARGB(255, 0, 0, 0),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 12),
             child: Spring.fadeIn(
@@ -33,6 +34,7 @@ class ServiceProfile extends StatelessWidget {
                       color: Color(0xFFadad57).withOpacity(0.9),
                       fontWeight: FontWeight.bold,
                       fontSize: 25.sp,
+                      fontFamily: 'OpenSansCondensed',
                     ),
                   ),
 
@@ -40,19 +42,23 @@ class ServiceProfile extends StatelessWidget {
                   ServiceAbout(
                     serviceTextWidget: GFAccordion(
                       contentPadding: EdgeInsets.all(5),
-                      showAccordion: true,
+                      showAccordion: true ,
                       title: 'APPLICATION MOBILE',
+                      textStyle: const TextStyle(
+                          fontFamily: 'OpenSansCondensed',
+                          fontWeight: FontWeight.bold),
                       contentChild: Wrap(
+                        direction: Axis.horizontal,
                         children: [
                           ServiceTextTile(
                               serviceText:
-                                  "- Creation et integration d'une applicationt de A a Z a partir d'une maquete"),
+                                  "- Création et intégration d'une applicationt de A a Z a partir d'une maquete"),
                           ServiceTextTile(
                               serviceText:
                                   "- Maintenance avec factorisation de code de l'application"),
                           ServiceTextTile(
                               serviceText:
-                                  "- Optimisation et analyse de la perfomance de l'application"),
+                                  "- Optimisation et analyse de la pérfomance de l'application"),
                           ServiceTextTile(
                               serviceText:
                                   "- Assure la responsive mobile, application bien adapte a l'ecran "),
@@ -72,18 +78,22 @@ class ServiceProfile extends StatelessWidget {
                     serviceTextWidget: GFAccordion(
                       showAccordion: true,
                       title: 'APPLICATION WEB',
+                      textStyle: const TextStyle(
+                          fontFamily: 'OpenSansCondensed',
+                          fontWeight: FontWeight.bold),
                       contentChild: Wrap(
                         children: [
                           ServiceTextTile(
                               serviceText:
-                                  "- Creation d'une applicationt de A a Z a partir d'une maquete"),
+                                  " - Création d'une applicationt a partir d'une maquete"),
                           ServiceTextTile(
                               serviceText:
-                                  "- Factorisation de code de l'application"),
+                                  " - Factorisation de code de l'application"),
                           ServiceTextTile(
-                              serviceText: "- Optimisation de l'application"),
+                              serviceText:
+                                  " - Optimisation et analyse de l'application"),
                           ServiceTextTile(
-                              serviceText: "- Assure la responsive web"),
+                              serviceText: " - Assure la responsive web"),
                         ],
                       ),
                       collapsedIcon: Icon(Icons.arrow_drop_down_circle_rounded),
@@ -100,17 +110,20 @@ class ServiceProfile extends StatelessWidget {
                     serviceTextWidget: GFAccordion(
                       showAccordion: true,
                       title: 'CONCEPTION UI/UX WEB/MOBILE',
+                      textStyle: const TextStyle(
+                          fontFamily: 'OpenSansCondensed',
+                          fontWeight: FontWeight.bold),
                       contentChild: Wrap(
                         children: [
-                          ServiceTextTile(serviceText: "- API Integration "),
+                          ServiceTextTile(serviceText: " - API Integration "),
                           ServiceTextTile(
-                              serviceText: "- Factorisation de code"),
-                          ServiceTextTile(
-                              serviceText:
-                                  "- Optimisation et analyse performance"),
+                              serviceText: " - Factorisation de code"),
                           ServiceTextTile(
                               serviceText:
-                                  "- Assure la responsive mobile, web et desktop "),
+                                  " - Optimisation et analyse de l'interface utilisateur "),
+                          ServiceTextTile(
+                              serviceText:
+                                  " - Assure la responsive mobile, web et desktop "),
                         ],
                       ),
                       collapsedIcon: Icon(Icons.arrow_drop_down_circle_rounded),

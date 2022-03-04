@@ -31,7 +31,7 @@ class _ResumeProfileState extends State<ResumeProfile> {
         height: widget.heightC1,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/profile-bg.jpg"),
+            image: AssetImage("images/profile-bg.png"),
             fit: BoxFit.cover,
           ),
         ),
@@ -49,6 +49,7 @@ class _ResumeProfileState extends State<ResumeProfile> {
                     color: Color(0xFFadad57).withOpacity(0.9),
                     fontWeight: FontWeight.bold,
                     fontSize: 25.sp,
+                    fontFamily: 'OpenSansCondensed',
                   ),
                 ),
                 Expanded(
@@ -60,7 +61,8 @@ class _ResumeProfileState extends State<ResumeProfile> {
                           style: TextStyle(
                             color: Colors.white60,
                             fontWeight: FontWeight.normal,
-                            fontSize: 22.sp,
+                            fontSize: 26.sp,
+                            fontFamily: 'OpenSansCondensed',
                           ),
                           textAlign: TextAlign.justify,
                         ),
@@ -70,11 +72,11 @@ class _ResumeProfileState extends State<ResumeProfile> {
                 ),
                 //
                 MaterialButton(
-                  color: Colors.black45,
+                  color: Colors.white10,
                   onPressed: ()=> downloadLocalFile('Cv/cv-maharo.pdf'),
                   child: Text(
                     "TELECHARGER CV",
-                    style: TextStyle(color: Colors.white, fontSize: 15.sp),
+                    style: TextStyle(color: Colors.white, fontSize: 15.sp,  fontFamily: 'OpenSansCondensed',),
                   ),
                 )
               ],

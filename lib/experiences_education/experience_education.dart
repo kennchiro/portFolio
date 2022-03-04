@@ -8,7 +8,7 @@ class ExperienceEducation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraint) {
-      if (constraint.maxWidth < 768) {
+      if (constraint.maxWidth < 920) {
         return Column(
             children: [
               Experience(heightExpe: constraint.maxHeight,),

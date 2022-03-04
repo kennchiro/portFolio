@@ -24,7 +24,8 @@ class ExperienceItem extends StatelessWidget {
     return Spring.slide(
       slideType: SlideType.slide_in_bottom,
       delay: const Duration(milliseconds: 20),
-      child: Container(
+      child: Card(
+        color: Color.fromARGB(255, 32, 32, 32),
         child: Row(
           children: [
             Padding(
@@ -50,14 +51,14 @@ class ExperienceItem extends StatelessWidget {
                     Text(
                       this.dateExp,
                       style: TextStyle(
-                        color: Colors.grey.shade700,
+                        color: Color(0xFFadad57).withOpacity(0.9),
                         fontSize: 12.h,
                       ),
                     ),
                     Text(
                       this.entreprise,
                       style: TextStyle(
-                        color: Colors.black87,
+                        color: Colors.white70,
                         fontWeight: FontWeight.bold,
                         fontSize: 15.h,
                       ),
@@ -65,7 +66,7 @@ class ExperienceItem extends StatelessWidget {
                     Text(
                       this.ville,
                       style: TextStyle(
-                        color: Colors.black87,
+                        color: Colors.white70,
                         fontWeight: FontWeight.bold,
                         fontSize: 15.h,
                       ),
@@ -73,7 +74,7 @@ class ExperienceItem extends StatelessWidget {
                     SizedBox(height: 5),
                     Text(
                       "Job d'été : " + this.contextJob,
-                      style: TextStyle(color: Colors.black87, fontSize: 12.h),
+                      style: TextStyle(color: Colors.white70, fontSize: 12.h),
                     ),
                     Container(
                       child: listWidgetOutil,

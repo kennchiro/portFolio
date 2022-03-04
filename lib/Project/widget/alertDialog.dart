@@ -32,7 +32,7 @@ class DialogType extends StatelessWidget {
               ),
               label: Text(
                 label,
-                style: TextStyle(fontSize: 15.h, color: Colors.black87),
+                style: TextStyle(fontSize: 15.h, color: Colors.black87, fontFamily: 'OpenSansCondensed',),
               ),
             ),
             IconButton(

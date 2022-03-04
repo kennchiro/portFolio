@@ -38,25 +38,13 @@ class GlobalText extends StatelessWidget {
       overflow: overflow,
       style: TextStyle(
           color: color,
-          fontFamily: _getFontFamily(),
+          fontFamily: 'OpenSansCondensed',
           fontSize: fontSize,
           fontWeight: fontWeight,
           letterSpacing: letterSpacing,
-          decoration: decoration),
+          decoration: decoration,
+        ),
     );
   }
 
-  _getFontFamily() {
-    String ff = "";
-
-    switch (fontFamily) {
-      case FontFamily.gtWalsheimPro:
-        ff = 'GTWalsheimPro';
-        break;
-      default:
-        ff = 'GTWalsheimPro';
-    }
-
-    return ff;
-  }
 }

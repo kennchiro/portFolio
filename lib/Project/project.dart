@@ -57,6 +57,7 @@ class _ProjectState extends State<Project> {
                   color: Color(0xFFadad57).withOpacity(0.9),
                   fontWeight: FontWeight.bold,
                   fontSize: 25,
+                  fontFamily: 'OpenSansCondensed',
                 ),
               ),
             ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class ServiceTextTile extends StatelessWidget {
   final String serviceText;
@@ -15,10 +15,11 @@ class ServiceTextTile extends StatelessWidget {
      return Text(
         this.serviceText,
         style: TextStyle(
-          fontSize:  constraint.maxWidth < 920 ?  13.h : 9.h,
+          fontSize:  constraint.maxWidth > 400 ?  13 : 9, // 13android , 9 desktop
           color: Colors.black54,
         ),
         textAlign: TextAlign.justify,
+        overflow: TextOverflow.visible,
       );
     });
   }

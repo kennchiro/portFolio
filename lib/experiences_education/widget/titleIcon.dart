@@ -16,15 +16,15 @@ class TitleIcon extends StatelessWidget {
       children: [
         Icon(
           Icons.circle,
-          color: Colors.black54,
+          color: Colors.white70,
           size: 10.h,
         ),
         SizedBox(width: 8.h,),
         Flexible(
           child: Text(
             title,
-            style: TextStyle(fontSize: 12.h, color: Colors.black87),
-            overflow: TextOverflow.ellipsis,
+            style: TextStyle(fontSize: 12.h, color: Colors.white70),
+            overflow: TextOverflow.visible,
           ),
         )
       ],

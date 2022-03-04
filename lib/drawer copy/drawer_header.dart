@@ -25,7 +25,7 @@ class ProDrawerHeader extends StatelessWidget {
                 ),
                 label: Text(
                   'Retour',
-                  style: TextStyle(color: Colors.white70, fontSize: 20.sp),
+                  style: TextStyle(color: Colors.white70, fontSize: 20.sp,  fontFamily: 'OpenSansCondensed',),
                 )),
             SizedBox(
               height: 33.h,

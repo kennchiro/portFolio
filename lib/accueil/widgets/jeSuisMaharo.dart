@@ -11,27 +11,61 @@ class JeSuisMaharo extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          
           Text(
-            "",
-            style: TextStyle(
-              color: Colors.white54,
-              fontSize: 8.w,
-            ),
-          ),
-          Text(
-            "Je suis Maharo.",
-            style: TextStyle(
-              color: Colors.white70,
-              fontSize: 18.w,
-            ),
-          ),
-          Text(
-            "Développeur Web & Mobile.",
+            "Bonjour !",
             style: TextStyle(
               color: Colors.white70,
               fontSize: 12.w,
+              fontFamily: 'OpenSansCondensed',
             ),
           ),
+    
+          //
+          Text.rich(
+            TextSpan(
+              text: 'Je suis ', // default text style
+              style: TextStyle(
+                color: Colors.white70,
+                fontFamily: 'OpenSansCondensed',
+                fontSize: 14.w,
+              ),
+              children: <TextSpan>[
+                TextSpan(
+                  text: ' Maharo Elie',
+                  style: TextStyle(
+                    color: Color(0xFFadad57).withOpacity(0.9),
+                    fontFamily: 'OpenSansCondensed',
+                    fontSize: 14.w,
+                  ),
+                ),
+              ],
+            ),
+          ),
+    
+    
+          //
+           Text.rich(
+            TextSpan(
+              text: 'Développeur ', // default text style
+              style: TextStyle(
+                color: Colors.white70,
+                fontFamily: 'OpenSansCondensed',
+                fontSize: 14.w,
+              ),
+              children: <TextSpan>[
+                TextSpan(
+                  text: 'Web & Mobile. ',
+                  style: TextStyle(
+                    color: Color(0xFFadad57).withOpacity(0.9),
+                    fontFamily: 'OpenSansCondensed',
+                    fontSize: 14.w,
+                  ),
+                ),
+              ],
+            ),
+          ),
+    
         ],
       ),
     );
